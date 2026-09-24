@@ -1,12 +1,12 @@
 {
   "name": "veylingstudio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Veylings game development studio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "AminMasud",
   "license": "ISC"
 }
