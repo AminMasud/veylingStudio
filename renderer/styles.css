@@ -1,0 +1,10 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}

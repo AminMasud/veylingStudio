@@ -2,20 +2,34 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
 function createWindow() {
-    const window = new BrowserWindow({
-        width: 1000,
-        height: 700
+    const win = new BrowserWindow({
+        width: 1200,
+        height: 800,
+        title: "Veylings Studio"
     });
 
     if (app.isPackaged) {
-        window.loadFile(
+        win.loadFile(
             path.join(__dirname, "../renderer/dist/index.html")
         );
     } else {
-        window.loadURL("http://localhost:5173");
+        win.loadURL("http://localhost:5173");
     }
 }
-
 app.whenReady().then(() => {
     createWindow();
 });
+
+app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
+        app.quit();
+    }
+});
+
+app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
+});
+
+
