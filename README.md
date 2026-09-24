@@ -1,1 +1,3 @@
 # veylingStudio
+
+## starting the studio
